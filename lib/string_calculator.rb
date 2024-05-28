@@ -17,10 +17,9 @@ class StringCalculator
     
     negative_number = int_numbers.select { |number| number < 0 } # find the negative number and add them into the array
 
-    if negative_number.present?
-      raise "negative numbers not allowed #{negative_number.first}" # raise the runtime error for first negative number 
+    if negative_number.any?
+      raise "negative numbers not allowed #{negative_number.join(', ')}" # raise the runtime error for negative numbers
     end
-    
 
     int_numbers.sum
   end
