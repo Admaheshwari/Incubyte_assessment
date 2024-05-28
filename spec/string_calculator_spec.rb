@@ -16,5 +16,11 @@ RSpec.describe StringCalculator do
       end
     end
 
+    context 'when input is two numbers' do 
+    	it 'return the sum of the two numbers' do 
+    		expect(StringCalculator.add('2,7')).to eq(9)
+    	end
+    end
+
   end
 end
