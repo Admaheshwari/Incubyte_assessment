@@ -4,7 +4,7 @@ class StringCalculator
 
     return numbers.to_i if numbers.length == 1 # return the same no if we have the length eq to 1
 
-    int_numbers = numbers.split(',').map(&:to_i) # split the number from comma and make them array of integer
+    int_numbers = numbers.split(/,|\n/).map(&:to_i) # split the number from comma and make them array of integer
     int_numbers.sum
   end
 end

@@ -30,7 +30,7 @@ RSpec.describe StringCalculator do
 
     context 'when input contains \n in between numbers' do 
     	it 'return the sum of the numbers given' do 
-    		expect(StringCalculator.add('1\n2,3')).to eq(6)
+    		expect(StringCalculator.add("1\n2,3")).to eq(6)
     	end
     end
 
