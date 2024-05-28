@@ -14,6 +14,14 @@ class StringCalculator
     end
 
     int_numbers = numbers.split(Regexp.union(delimiter)).map(&:to_i) # split the number from comma and make them array of integer
+    
+    negative_number = int_numbers.select { |number| number < 0 } # find the negative number and add them into the array
+
+    if negative_number.present?
+      raise "negative numbers not allowed #{negative_number.first}" # raise the runtime error for first negative number 
+    end
+    
+
     int_numbers.sum
   end
 end
