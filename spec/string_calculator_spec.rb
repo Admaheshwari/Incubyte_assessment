@@ -39,5 +39,11 @@ RSpec.describe StringCalculator do
     		expect(StringCalculator.add("//;\n1;2")).to eq(3)
     	end
     end
+
+    context 'when input contains negative number' do 
+    	it 'return the negative number from the string with error message' do 
+    		expect { StringCalculator.add("4,5,2,-8") }.to raise_error(RuntimeError, "negative numbers not allowed -8")
+    	end
+    end
   end
 end
