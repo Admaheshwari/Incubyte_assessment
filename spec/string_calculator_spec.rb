@@ -34,5 +34,10 @@ RSpec.describe StringCalculator do
     	end
     end
 
+    context 'when input contains //;\n1;2 in between numbers' do 
+    	it 'return the sum of the numbers given' do 
+    		expect(StringCalculator.add("//;\n1;2")).to eq(3)
+    	end
+    end
   end
 end
